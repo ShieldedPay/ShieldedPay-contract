@@ -19,3 +19,28 @@ pub fn withdraw(amount: u64, recipient: &str) {
 pub fn allocate_yield() {
     // Calculate and distribute yield from BENJI strategy
 }
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_init_does_not_panic() {
+        init();
+    }
+
+    #[test]
+    fn test_deposit_does_not_panic() {
+        deposit(1000);
+    }
+
+    #[test]
+    fn test_withdraw_does_not_panic() {
+        withdraw(500, "GBLEDGERKEYPLACEHOLDER");
+    }
+
+    #[test]
+    fn test_allocate_yield_does_not_panic() {
+        allocate_yield();
+    }
+}
+
