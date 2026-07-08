@@ -1,0 +1,24 @@
+# Auto-detect text files and normalize to LF
+* text=auto
+
+# Shell scripts should always use LF
+*.sh text eol=lf
+
+# Rust source files
+*.rs text diff=rust
+
+# Markdown
+*.md text
+
+# TOML
+*.toml text
+
+# YAML
+*.yml text
+*.yaml text
+
+# Binary files
+*.wasm binary
+*.png binary
+*.jpg binary
+*.ico binary
