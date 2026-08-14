@@ -12,3 +12,16 @@ edition = "2021"
 license = "MIT"
 authors = ["ShieldedPay"]
 description = "Smart contracts for privacy-first global payroll on Stellar"
+
+[workspace.dependencies]
+soroban-sdk = "27.0.5"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true

@@ -63,4 +63,4 @@ cargo build --workspace
 
 ## Status
 
-**MVP / Prototype.** These are scaffolded contract stubs. Real ZK-SNARK verification logic, nullifier management, and Stellar Soroban integration are pending implementation. Not audited for production use.
+**MVP / Prototype.** Treasury balance tracking, Merkle-based payroll commitments, and nullifier-based claim verification are implemented and unit-tested (12 tests across the three contracts). Real ZK-SNARK circuits (in place of the current sha256-based commitments) and actual token transfers (currently ledger bookkeeping only, no asset movement yet) are still pending. Not audited for production use.

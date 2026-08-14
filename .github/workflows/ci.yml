@@ -19,13 +19,16 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: wasm32-unknown-unknown
+          targets: wasm32v1-none
 
       - name: Check formatting
         run: cargo fmt --check
 
-      - name: Build
-        run: cargo build --workspace
+      - name: Build deployable contracts (wasm32v1-none)
+        run: cargo build --workspace --target wasm32v1-none --release
 
       - name: Run clippy
         run: cargo clippy --workspace -- -D warnings
+
+      - name: Run tests
+        run: cargo test --workspace
