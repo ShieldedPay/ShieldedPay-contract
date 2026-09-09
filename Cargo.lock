@@ -1382,6 +1382,7 @@ name = "shieldedpay-claim"
 version = "0.1.0"
 dependencies = [
  "shieldedpay-payroll",
+ "shieldedpay-treasury",
  "soroban-sdk",
 ]
 
