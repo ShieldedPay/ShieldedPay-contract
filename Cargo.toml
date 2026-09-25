@@ -14,7 +14,7 @@ authors = ["ShieldedPay"]
 description = "Smart contracts for privacy-first global payroll on Stellar"
 
 [workspace.dependencies]
-soroban-sdk = "27.0.5"
+soroban-sdk = "28.0.0"
 
 [profile.release]
 opt-level = "z"
